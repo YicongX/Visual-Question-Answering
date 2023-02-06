@@ -2,7 +2,7 @@
 
 In this project we address the task of Visual Question Answering (VQA): given an image and a question about it, our goal is to provide an answer to this question. While open-ended question answering would demand text generation, VQA is traditionally tackled as a classification problem; we select the answer out of a (large) pool of possible answers.
 
-      ![image](https://user-images.githubusercontent.com/72159394/216913592-0cc53d50-4450-45fc-ac69-d08b3f0dcc6a.png)
+![image](https://user-images.githubusercontent.com/72159394/216913592-0cc53d50-4450-45fc-ac69-d08b3f0dcc6a.png)
 
 Our goal is to implement two such answer classifiers. First, we implement a simple baseline model that featurizes the image and the question into 1-d vectors, then concatenates the two representations and feeds them to a linear layer to output a score for each possible answer. However, we noticed that such a late fusion of the two modalities (vision and language) does not allow for sufficient feature interaction and leads to poor results. Lastly, we implemented a Transformer-based model that featurizes the two modalities into sequences, then applies iterative self-/cross-attention on them.
 
