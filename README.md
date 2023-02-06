@@ -12,6 +12,6 @@ We used VQA v1.0 Open-Ended.(https://visualqa.org/vqa_v1_download.html).For refe
 ## Baseline Results
 VQA model for this project is a classifier over 5217 classes. The baseline featurize the image using a frozen pre-trained ResNet18. For that, we feed the image to ResNet18 except for the last layer which gives the classification logits. This gives us an 1-d feature vector for the image. We also featurize the question into an 1-d vector using a frozen pre-trained RoBERTa, a Transformer-based language model. Finally, we concatenate the two representations and feed to a linear layer. The parameters of this linear layer are trainable. 
 
-![image](https://user-images.githubusercontent.com/72159394/216914705-9e0bb3d8-4de1-45af-a2bf-1e2b0e642721.png)
+![image](https://user-images.githubusercontent.com/72159394/216914814-9b8e9a26-ec82-435d-8d34-a2ea1174626c.png)
 
 For baseline model, flattened image features and question embedding are simply concatenated together as a combined input for linear classifier. Thus the model is not learning the correlation and reasoning between image, question pair and answers but trying to project this combined input feature to the answer distribution. So as the plots shows, top 4 predicted answers aligned with the ground truth answer distribution with answer ‘YES’ and ‘Other’ as the most frequent predictions.
