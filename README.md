@@ -15,3 +15,11 @@ VQA model for this project is a classifier over 5217 classes. The baseline featu
 ![image](https://user-images.githubusercontent.com/72159394/216914814-9b8e9a26-ec82-435d-8d34-a2ea1174626c.png)
 
 For baseline model, flattened image features and question embedding are simply concatenated together as a combined input for linear classifier. Thus the model is not learning the correlation and reasoning between image, question pair and answers but trying to project this combined input feature to the answer distribution. So as the plots shows, top 4 predicted answers aligned with the ground truth answer distribution with answer ‘YES’ and ‘Other’ as the most frequent predictions.
+
+## Transformer Results
+The baseline model has obvious limitations: it condenses the whole image (question) into an 1-d vector and there's no interaction between the visual and textual features. We improved the baseline model with attention layers, using Transformers.
+
+Here is the model we implemented:
+
+![image](https://user-images.githubusercontent.com/72159394/216915392-a7adb590-56f9-48e1-a95a-d8bf652e4e4b.png)
+
