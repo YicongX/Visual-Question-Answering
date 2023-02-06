@@ -23,3 +23,8 @@ Here is the model we implemented:
 
 ![image](https://user-images.githubusercontent.com/72159394/216915392-a7adb590-56f9-48e1-a95a-d8bf652e4e4b.png)
 
+![image](https://user-images.githubusercontent.com/72159394/216915609-64076360-de0c-42c1-ba93-79030cc46849.png)
+
+Most frequent ground truth results are not as dominant as the baseline model. We can see more less frequent results show up in the histogram and match up with ground truth distribution  for example class ‘white’, ‘red’, ‘blue’, ‘2’. The final validation accuracy has 13.9% increase compared to baseline model.
+
+
